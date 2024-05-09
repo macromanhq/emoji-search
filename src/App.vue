@@ -33,11 +33,11 @@ export default {
     }
   },
   created() {
-    fetch('./emojis.json') // Assuming emojis.json is in the assets directory
+    fetch('./emojis.json') 
       .then(response => response.json())
       .then(data => {
         this.emojis = data;
-        this.filteredEmojis = data.slice(0, 10); // Load default emojis on creation
+        this.filteredEmojis = data.slice(0, 10); 
       });
   }
 }
