@@ -1,26 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <EmojiSearch @search="handleSearch" />
+    <SearchResults :emojis="filteredEmojis" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import EmojiSearch from './components/EmojiSearch.vue';
+import SearchResults from './components/SearchResults.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    EmojiSearch,
+    SearchResults
+  },
+  data() {
+    return {
+      emojis: [], // This will store all emojis
+      filteredEmojis: [] // This will store emojis to display
+    };
+  },
+  methods: {
+    handleSearch(query) {
+      if (query) {
+        this.filteredEmojis = this.emojis.filter(emoji =>
+          emoji.name.toLowerCase().includes(query.toLowerCase())
+        );
+      } else {
+        this.filteredEmojis = this.emojis.slice(0, 10); // Reset to default view
+      }
+    }
+  },
+  created() {
+    fetch('./emojis.json') // Assuming emojis.json is in the assets directory
+      .then(response => response.json())
+      .then(data => {
+        this.emojis = data;
+        this.filteredEmojis = data.slice(0, 10); // Load default emojis on creation
+      });
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
