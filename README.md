@@ -1,24 +1,10 @@
 # emoji-search
 
-## Project setup
-```
-npm install
-```
+## What is it?
+A very easy and effective way to search for any emoji you need and just click on it to copy to your clipboard. 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Where can i find it?
+Its live at [https://emoji.mcm.com.bd](https://emoji.mcm.com.bd)
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Who made it? 
+Its just a fun one nighter project, made by [Macroman Solution](https://macromanhq.com)
