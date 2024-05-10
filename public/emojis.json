@@ -5250,11 +5250,6 @@
         "name": "cyclone"
     },
     {
-        "index": 1050,
-        "emoji": "🌈",
-        "name": "rainbow"
-    },
-    {
         "index": 1051,
         "emoji": "🌂",
         "name": "closed umbrella"
@@ -8188,16 +8183,6 @@
         "index": 1637,
         "emoji": "🏳",
         "name": "white flag"
-    },
-    {
-        "index": 1638,
-        "emoji": "🏳️‍🌈",
-        "name": "rainbow flag"
-    },
-    {
-        "index": 1639,
-        "emoji": "🏳️‍⚧️",
-        "name": "transgender flag"
     },
     {
         "index": 1640,
