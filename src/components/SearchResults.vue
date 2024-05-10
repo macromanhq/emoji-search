@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
       <div class="results mt-3">
         <div class="flex justify-normal flex-wrap">
-          <div class="cursor-pointer hover:bg-gray-700 p-2 rounded text-xl antialiased" v-for="emoji in emojis"
+          <div class="border border-gray-200 cursor-pointer hover:bg-gray-700 p-2 m-1 rounded text-xl antialiased bg-white" v-for="emoji in emojis"
             :key="emoji.index" @click="copyToClipboard(emoji.emoji)">
             {{ emoji.emoji }}
           </div>
