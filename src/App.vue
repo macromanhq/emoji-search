@@ -1,19 +1,26 @@
 <template>
   <div id="app">
+    <NavBar />
     <EmojiSearch @search="handleSearch" />
+    
     <SearchResults :emojis="filteredEmojis" />
+    <FooterBar />
   </div>
 </template>
 
 <script>
 import EmojiSearch from './components/EmojiSearch.vue';
 import SearchResults from './components/SearchResults.vue';
+import NavBar from './components/NavBar.vue';
+import FooterBar from './components/FooterBar.vue';
 
 export default {
   name: 'App',
   components: {
     EmojiSearch,
-    SearchResults
+    SearchResults,
+    NavBar,
+    FooterBar,
   },
   data() {
     return {
@@ -28,16 +35,16 @@ export default {
           emoji.name.toLowerCase().includes(query.toLowerCase())
         );
       } else {
-        this.filteredEmojis = this.emojis.slice(0, 10); // Reset to default view
+        this.filteredEmojis = this.emojis.slice(0, 50); // Reset to default view
       }
     }
   },
   created() {
-    fetch('./emojis.json') // Assuming emojis.json is in the assets directory
+    fetch('./emojis.json') 
       .then(response => response.json())
       .then(data => {
         this.emojis = data;
-        this.filteredEmojis = data.slice(0, 10); // Load default emojis on creation
+        this.filteredEmojis = data.slice(0, 50); 
       });
   }
 }
