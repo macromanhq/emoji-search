@@ -10,7 +10,7 @@
           <div class="md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="#" class="text-white rounded-md px-3 py-2 text-sm font-medium"
+              <a href="https://github.com/macromanhq/emoji-search" class="text-white rounded-md px-3 py-2 text-sm font-medium"
                 aria-current="page">
                 <img src="/github.svg" class="inline w-6 h-6 text-white" alt="">
               </a>
